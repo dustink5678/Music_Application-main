@@ -3,11 +3,13 @@ package model;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class DataWriter extends DataConstants {
 	
+	@SuppressWarnings({"unchecked", "CallToPrintStackTrace"})
 	public static void saveUsers() {
 		UserList userList = UserList.getInstance(); // Fixed: Changed User.getInstance() to UserList.getInstance()
 		ArrayList<User> users = userList.getUsers(); // Fixed: Changed getUser() to getUsers()
@@ -30,6 +32,7 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static JSONObject getUserJSON(User user) {
 		JSONObject userDetails = new JSONObject();
 		userDetails.put(USER_ID, user.getId());
@@ -51,60 +54,60 @@ public class DataWriter extends DataConstants {
 		// Handle user type and type-specific fields
 		userDetails.put(USER_TYPE, user.getType());
 		
-		if (user instanceof Student) { // Fixed: Check if user is an instance of Student
-			Student student = (Student) user;
-			// Add student-specific fields
-			JSONArray enrolledLessons = new JSONArray();
-			ArrayList<String> lessons = getEnrolledLessonsIds(student); // Fixed: Helper method
-			if (lessons != null) {
-				for (String lesson : lessons) {
-					enrolledLessons.add(lesson);
-				}
-			}
-			userDetails.put(USER_ENROLLED_LESSONS, enrolledLessons);
-			userDetails.put(USER_SKILL_LEVEL, student.getSkillLevel());
-			
-			// Handle practice list
-			JSONArray practiceList = new JSONArray();
-			ArrayList<String> practices = convertSongsToIds(student.getPracticeList()); // Fixed: Helper method
-			if (practices != null) {
-				for (String practice : practices) {
-					practiceList.add(practice);
-				}
-			}
-			userDetails.put(USER_PRACTICE_LIST, practiceList);
-			
-			// Handle progress object
-			JSONObject progressObj = new JSONObject();
-			if (student.getProgress() != null) {
-				for (String key : student.getProgress().keySet()) {
-					progressObj.put(key, student.getProgress().get(key));
-				}
-			}
-			userDetails.put(USER_PROGRESS, progressObj);
-		} 
-		else if (user instanceof Teacher) { // Fixed: Check if user is an instance of Teacher
-			Teacher teacher = (Teacher) user;
-			// Add teacher-specific fields
-			JSONArray studentsArray = new JSONArray();
-			ArrayList<String> studentIds = getStudentIds(teacher); // Fixed: Helper method
-			if (studentIds != null) {
-				for (String student : studentIds) {
-					studentsArray.add(student);
-				}
-			}
-			userDetails.put(USER_STUDENTS, studentsArray);
-			
-			JSONArray scheduledLessons = new JSONArray();
-			ArrayList<String> lessons = getScheduledLessonsIds(teacher); // Fixed: Helper method
-			if (lessons != null) {
-				for (String lesson : lessons) {
-					scheduledLessons.add(lesson);
-				}
-			}
-			userDetails.put(USER_SCHEDULED_LESSONS, scheduledLessons);
-			userDetails.put(USER_SPECIALIZATION, teacher.getSpecialization());
-		}
+            switch (user) {
+                case Student student -> { 			// Add student-specific fields
+                    JSONArray enrolledLessons = new JSONArray();
+                    ArrayList<String> lessons = getEnrolledLessonsIds(student); // Fixed: Helper method
+                    if (lessons != null) {
+                        for (String lesson : lessons) {
+                            enrolledLessons.add(lesson);
+                        }
+                    }
+                    userDetails.put(USER_ENROLLED_LESSONS, enrolledLessons);
+                    userDetails.put(USER_SKILL_LEVEL, student.getSkillLevel());
+                    
+                    // Handle practice list
+                    JSONArray practiceList = new JSONArray();
+                    ArrayList<String> practices = convertSongsToIds(student.getPracticeList()); // Fixed: Helper method
+                    if (practices != null) {
+                        for (String practice : practices) {
+                            practiceList.add(practice);
+                        }
+                    }
+                    userDetails.put(USER_PRACTICE_LIST, practiceList);
+                    
+                    // Handle progress object
+                    JSONObject progressObj = new JSONObject();
+                    if (student.getProgress() != null) {
+                        for (String key : student.getProgress().keySet()) {
+                            progressObj.put(key, student.getProgress().get(key));
+                        }
+                    }
+                    userDetails.put(USER_PROGRESS, progressObj);
+                }
+                case Teacher teacher -> { 			// Add teacher-specific fields
+                    JSONArray studentsArray = new JSONArray();
+                    ArrayList<String> studentIds = getStudentIds(teacher); // Fixed: Helper method
+                    if (studentIds != null) {
+                        for (String student : studentIds) {
+                            studentsArray.add(student);
+                        }
+                    }
+                    userDetails.put(USER_STUDENTS, studentsArray);
+                    
+                    JSONArray scheduledLessons = new JSONArray();
+                    ArrayList<String> lessons = getScheduledLessonsIds(teacher); // Fixed: Helper method
+                    if (lessons != null) {
+                        for (String lesson : lessons) {
+                            scheduledLessons.add(lesson);
+                        }
+                    }
+                    userDetails.put(USER_SCHEDULED_LESSONS, scheduledLessons);
+                    userDetails.put(USER_SPECIALIZATION, teacher.getSpecialization());
+                }
+                default -> {
+                }
+            }
         
         return userDetails;
 	}
@@ -122,7 +125,7 @@ public class DataWriter extends DataConstants {
 	
 	private static ArrayList<String> getEnrolledLessonsIds(Student student) {
 		// This method would extract IDs from Lesson objects
-		ArrayList<String> lessonIds = new ArrayList<>();
+		var lessonIds = new ArrayList<String>();
 		// Implementation depends on your Student and Lesson classes
 		return lessonIds;
 	}

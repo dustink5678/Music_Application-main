@@ -3,9 +3,12 @@ package model;
 import java.util.ArrayList;
 
 public class MusicLearningApplication {
+    @SuppressWarnings("unused")
     private User user;
+    @SuppressWarnings("unused")
     private Library library;
     private User currentUser;
+    @SuppressWarnings("unused")
     private Song currentSong;
 
     public MusicLearningApplication() {

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class UserList {
-    private ArrayList<User> users;
+    private final ArrayList<User> users;
     private static UserList userList;
 
     private UserList() {

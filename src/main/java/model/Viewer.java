@@ -1,8 +1,11 @@
 package model;
 
 public class Viewer {
+    @SuppressWarnings("unused")
     private Song currentSong;
+    @SuppressWarnings("unused")
     private int currentPosition;
+    @SuppressWarnings("unused")
     private boolean isPlaying;
 
     public void play() {

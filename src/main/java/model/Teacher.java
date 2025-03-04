@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Teacher extends User {
     private ArrayList<Student> students;
     private ArrayList<Lesson> scheduledLessons;
-    private String specialization;
+    private final String specialization;
 
     public Teacher(String username, String email, String password, LocalDateTime joinDate, 
                   ArrayList<Song> favorites, String UUID, ArrayList<Student> students,
@@ -27,11 +27,11 @@ public class Teacher extends User {
         UserList userList = UserList.getInstance();
         User user = userList.getUser(username);
         
-        if (user instanceof Student) {
+        if (user instanceof Student student) {
             if (students == null) {
                 students = new ArrayList<>();
             }
-            students.add((Student) user);
+            students.add(student);
             return true;
         }
         return false;

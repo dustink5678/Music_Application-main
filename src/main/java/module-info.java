@@ -5,10 +5,7 @@ module javafxbackround.musicapplication {
     requires jfugue;
     requires json.simple;
     requires java.desktop;
-    
-    // Explicitly exclude org.hamcrest.core from junit to resolve conflict
-    // or you can completely remove junit if not needed
-    
+        
     opens javafxbackround.music to javafx.fxml;
     exports javafxbackround.music;
 

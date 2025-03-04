@@ -6,8 +6,10 @@ public class Song {
     private String id;
     private String title;
     private ArrayList<ArrayList<Bar>> bars;
+    @SuppressWarnings("unused")
     private boolean isPublic;
     private ArrayList<Comment> comments;
+    @SuppressWarnings("unused")
     private Tempo tempo;
     private String genre;
     private User artist;
@@ -63,5 +65,29 @@ public class Song {
     public void addComment(User author, String comment) {
         Comment newComment = new Comment(this, comment, author, java.time.LocalDateTime.now());
         comments.add(newComment);
+    }
+
+    public ArrayList<Instrument> getInstruments() {
+        return instruments;
+    }
+
+    public void setInstruments(ArrayList<Instrument> instruments) {
+        this.instruments = instruments;
+    }
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public ArrayList<ArrayList<Bar>> getBars() {
+        return bars;
+    }
+
+    public void setBars(ArrayList<ArrayList<Bar>> bars) {
+        this.bars = bars;
     }
 }

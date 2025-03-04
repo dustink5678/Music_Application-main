@@ -13,6 +13,7 @@ public class App extends Application {
     private static Stage primaryStage;
 
     @Override
+    @SuppressWarnings("exports")
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
         
@@ -105,7 +106,7 @@ public class App extends Application {
         MusicPlayer player = new MusicPlayer();
         new Thread(() -> player.playSong()).start();
     }
-    
+    @SuppressWarnings("exports")
     public static Stage getPrimaryStage() {
         return primaryStage;
     }

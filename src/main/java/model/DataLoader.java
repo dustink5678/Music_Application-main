@@ -19,7 +19,9 @@ public class DataLoader extends DataConstants {
         try {
             System.out.println("Attempting to load users from: " + USER_FILE_NAME);
             System.out.println("Current working directory: " + System.getProperty("user.dir"));
-            
+
+            @SuppressWarnings("ConvertToTryWithResources")
+
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray peopleJSON = (JSONArray)parser.parse(reader);
@@ -136,13 +138,10 @@ public class DataLoader extends DataConstants {
             
         } catch (IOException e) {
             System.err.println("IO Error: " + e.getMessage());
-            e.printStackTrace();
         } catch (ParseException e) {
             System.err.println("JSON Parse Error: " + e.getMessage());
-            e.printStackTrace();
         } catch (Exception e) {
             System.err.println("Unexpected Error: " + e.getMessage());
-            e.printStackTrace();
         }
         
         return users;

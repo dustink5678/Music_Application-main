@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Instrument {
-    private ArrayList<Character> noteNames;
+    @SuppressWarnings("unused")
+    private final ArrayList<Character> noteNames;
     public HashMap<String, ArrayList<Character>> instrument; // Fixed: changed noteNames to ArrayList<Character>
     private String name;
     private String type;

@@ -7,7 +7,7 @@ import javax.sound.midi.Sequencer;
 import org.jfugue.player.Player;
 
 public class Music {
-    private static Player player;
+    private static final Player player;
     
     // Initialize player once
     static {
@@ -32,7 +32,6 @@ public class Music {
             System.err.println("MIDI system unavailable: " + e.getMessage());
         } catch (Exception e) {
             System.err.println("Error playing note: " + e.getMessage());
-            e.printStackTrace();
         }
     }
     

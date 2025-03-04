@@ -6,8 +6,8 @@ import java.util.HashMap;
 
 public class Student extends User {
     private ArrayList<Lesson> enrolledLessons;
-    private int skillLevel;
-    private ArrayList<Song> practiceList;
+    private final int skillLevel;
+    private final ArrayList<Song> practiceList;
     private HashMap<String, Integer> progress; // Using String (song ID) as key
 
     public Student(String username, String email, String password, LocalDateTime joinDate, 
