@@ -17,6 +17,11 @@
     </repositories>
     <dependencies>
         <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
             <groupId>org.jfugue</groupId>
             <artifactId>jfugue</artifactId>
             <version>5.0.9</version>
@@ -40,12 +45,6 @@
                 <version>3.11.0</version>
                 <configuration>
                     <release>21</release>
-                    <compilerArgs>
-                        <arg>--add-modules</arg>
-                        <arg>ALL-MODULE-PATH</arg>
-                        <arg>--patch-module</arg>
-                        <arg>javafxbackround.musicapplication=${project.build.directory}/classes</arg>
-                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>

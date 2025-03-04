@@ -1,5 +1,28 @@
-/Users/dustinking/Desktop/Dustin Coding/Java Projects/CSCE 247/Music_Application/musicapplication/src/main/java/javafxbackround/program/MusicPlayer.java
-/Users/dustinking/Desktop/Dustin Coding/Java Projects/CSCE 247/Music_Application/musicapplication/src/main/java/module-info.java
-/Users/dustinking/Desktop/Dustin Coding/Java Projects/CSCE 247/Music_Application/musicapplication/src/main/java/javafxbackround/controllers/PianoController.java
-/Users/dustinking/Desktop/Dustin Coding/Java Projects/CSCE 247/Music_Application/musicapplication/src/main/java/javafxbackround/music/App.java
-/Users/dustinking/Desktop/Dustin Coding/Java Projects/CSCE 247/Music_Application/musicapplication/src/main/java/javafxbackround/music/Music.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/javafxbackround/controllers/PianoController.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/MusicLearningApplication.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/UUIDGen.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/User.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Rest.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Accidental.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Student.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Song.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/DataConstants.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Library.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Note.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Teacher.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Tempo.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Viewer.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Comment.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/KeySignature.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/UserList.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Bar.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/TimeSignature.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/javafxbackround/program/MusicPlayer.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/DataLoader.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/DataWriter.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Accent.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Instrument.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/module-info.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/model/Lesson.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/javafxbackround/music/App.java
+/Users/dustinking/Desktop/Music_Application-main/src/main/java/javafxbackround/music/Music.java

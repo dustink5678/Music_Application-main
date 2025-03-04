@@ -1,3 +1,5 @@
+package model;
+
 public class Tempo {
     private int bpm;
     private boolean isRunning;

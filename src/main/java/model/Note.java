@@ -1,3 +1,5 @@
+package model;
+
 public class Note {
     private int numerator;
     private int denominator;

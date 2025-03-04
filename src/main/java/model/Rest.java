@@ -1,3 +1,5 @@
+package model;
+
 public class Rest {
     private int numerator;
     private int denominator;

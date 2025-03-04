@@ -2,6 +2,7 @@ module javafxbackround.musicapplication {
     requires javafx.controls;
     requires javafx.fxml;
     requires jfugue;
+    requires json.simple;
 
     opens javafxbackround.music to javafx.fxml;
     exports javafxbackround.music;

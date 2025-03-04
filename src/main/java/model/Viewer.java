@@ -1,3 +1,5 @@
+package model;
+
 public class Viewer {
     private Song currentSong;
     private int currentPosition;
