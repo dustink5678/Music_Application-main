@@ -1,0 +1,16 @@
+[
+    {
+        "id": "lesson_2025_02_23_1500",
+        "scheduledTime": "2025-02-23T15:00:00",
+        "currentSong": "96ee897c-f9fa-483b-8102-29c834bca234",
+        "notes": "Working on rhythm and timing for Happy Birthday",
+        "isCompleted": false
+    },
+    {
+        "id": "lesson_2025_02_24_1500",
+        "scheduledTime": "2025-02-24T15:00:00",
+        "currentSong": "96ee897c-f9fa-483b-8102-29c834bca234",
+        "notes": "Review previous lesson's rhythm work",
+        "isCompleted": false
+    }
+]

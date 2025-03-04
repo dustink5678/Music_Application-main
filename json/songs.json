@@ -1,0 +1,95 @@
+[
+    {
+        "id": "96ee897c-f9fa-483b-8102-29c834bca234",
+        "title":"Happy Birthday",
+        "bars":[{
+            "keySignature":[{
+                "key":"C",
+                "accidentals":[]
+            }],
+            "TimeSignature":[{
+                "numerator":3,
+                "denominator":4
+            }],
+            "notes":[
+            {
+                "numerator":1,
+                "denominator":8,
+                "pitch":196,
+                "Accidental":"Natural",
+                "position":"1"
+            },
+            {
+                "numerator":1,
+                "denominator":8,
+                "pitch":196,
+                "Accidental":"Natural",
+                "position":"1.5"
+            },
+            {
+                "numerator":1,
+                "denominator":4,
+                "pitch":220,
+                "Accidental":"Natural",
+                "position":"2"
+            },
+            {
+                "numerator":1,
+                "denominator":4,
+                "pitch":196,
+                "Accidental":"Natural",
+                "position":"3"
+            }
+            ],
+            "rests": []
+        },{
+            "keySignature":[{
+                "key":"C",
+                "accidentals":[]
+            }],
+            "TimeSignature":[{
+                "numerator":3,
+                "denominator":4
+            }],
+            "notes":[
+            {
+                "numerator":1,
+                "denominator":4,
+                "pitch":262,
+                "Accidental":"Natural",
+                "position":"1"
+            },
+            {
+                "numerator":1,
+                "denominator":2,
+                "pitch":247,
+                "Accidental":"Natural",
+                "position":"2"
+            }],
+            "rests": []            
+        }],
+        "isPublic": true,
+        "comments": [{
+            "id": "comment_001",
+            "text": "Great beginner song!",
+            "author": "5742f3e3-c288-44a3-8823-b8475f2ce091",
+            "timestamp": "2025-02-23T10:30:00",
+            "barNumber": 1
+        }],
+        "tempo": {
+            "bpm": 97,
+            "isRunning": false,
+            "timeSignature": {
+                "numerator": 3,
+                "denominator": 4
+            }
+        },
+        "genre":"Children",
+        "artist":"Stevia Wonder",
+        "instruments":[{
+            "piano":[{
+                "noteNames":["C","D","E","F","G","A","B"]
+            }]
+        }]
+    }
+]
