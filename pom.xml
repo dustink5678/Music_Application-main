@@ -6,8 +6,8 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <!-- Changed these from fixed version to release flag -->
+        <maven.compiler.release>21</maven.compiler.release>
     </properties>
     <repositories>
         <repository>
@@ -20,6 +20,13 @@
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
+            <exclusions>
+                <!-- Exclude junit to avoid the hamcrest conflict -->
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.jfugue</groupId>
@@ -34,6 +41,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
+            <version>21</version>
+        </dependency>
+        <!-- Added explicit dependency for javafx-graphics -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
             <version>21</version>
         </dependency>
     </dependencies>
@@ -57,7 +70,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>javafxbackround.App</mainClass>
+                            <mainClass>javafxbackround.music.App</mainClass>
                         </configuration>
                     </execution>
                 </executions>

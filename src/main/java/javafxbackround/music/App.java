@@ -36,6 +36,9 @@ public class App extends Application {
         stage.setTitle("Piano Music Application");
         stage.setResizable(false);
         stage.show();
+        primaryStage.setOnCloseRequest(event -> {
+        Music.shutdown();
+    });
     }
     
     private javafx.scene.layout.HBox createPianoKeys() {

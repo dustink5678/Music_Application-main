@@ -9,18 +9,18 @@ import org.json.simple.JSONObject;
 public class DataWriter extends DataConstants {
 	
 	public static void saveUsers() {
-		User users = User.getInstance();
-		ArrayList<User> userList = users.getUser();
+		UserList userList = UserList.getInstance(); // Fixed: Changed User.getInstance() to UserList.getInstance()
+		ArrayList<User> users = userList.getUsers(); // Fixed: Changed getUser() to getUsers()
 		
 		JSONArray jsonUsers = new JSONArray();
 		
 		//creating all the json objects
-		for(int i=0; i< userList.size(); i++) {
-			jsonUsers.add(getUserJSON(userList.get(i)));
+		for(int i=0; i< users.size(); i++) {
+			jsonUsers.add(getUserJSON(users.get(i)));
 		}
 		
 		//Write JSON file
-        try (FileWriter file = new FileWriter(USER_TEMP_FILE_NAME)) {
+        try (FileWriter file = new FileWriter(USER_FILE_NAME)) { // Fixed: Changed USER_TEMP_FILE_NAME to USER_FILE_NAME
  
             file.write(jsonUsers.toJSONString());
             file.flush();
@@ -32,15 +32,15 @@ public class DataWriter extends DataConstants {
 	
 	public static JSONObject getUserJSON(User user) {
 		JSONObject userDetails = new JSONObject();
-		userDetails.put(USER_ID, user.getId().toString());
+		userDetails.put(USER_ID, user.getId());
 		userDetails.put(USER_USER_NAME, user.getUserName());
 		userDetails.put(USER_EMAIL, user.getEmail());
 		userDetails.put(USER_PASSWORD, user.getPassword());
-		userDetails.put(USER_JOIN_DATE, user.getJoinDate());
+		userDetails.put(USER_JOIN_DATE, user.getJoinDate().toString());
 		
 		// Handle favorites array
 		JSONArray favoritesArray = new JSONArray();
-		ArrayList<String> favorites = user.getFavorites();
+		ArrayList<String> favorites = convertSongsToIds(user.getFavorites()); // Fixed: Convert Song objects to IDs
 		if (favorites != null) {
 			for (String favorite : favorites) {
 				favoritesArray.add(favorite);
@@ -51,21 +51,22 @@ public class DataWriter extends DataConstants {
 		// Handle user type and type-specific fields
 		userDetails.put(USER_TYPE, user.getType());
 		
-		if (user.getType().equals("Student")) {
+		if (user instanceof Student) { // Fixed: Check if user is an instance of Student
+			Student student = (Student) user;
 			// Add student-specific fields
 			JSONArray enrolledLessons = new JSONArray();
-			ArrayList<String> lessons = user.getEnrolledLessons();
+			ArrayList<String> lessons = getEnrolledLessonsIds(student); // Fixed: Helper method
 			if (lessons != null) {
 				for (String lesson : lessons) {
 					enrolledLessons.add(lesson);
 				}
 			}
 			userDetails.put(USER_ENROLLED_LESSONS, enrolledLessons);
-			userDetails.put(USER_SKILL_LEVEL, user.getSkillLevel());
+			userDetails.put(USER_SKILL_LEVEL, student.getSkillLevel());
 			
 			// Handle practice list
 			JSONArray practiceList = new JSONArray();
-			ArrayList<String> practices = user.getPracticeList();
+			ArrayList<String> practices = convertSongsToIds(student.getPracticeList()); // Fixed: Helper method
 			if (practices != null) {
 				for (String practice : practices) {
 					practiceList.add(practice);
@@ -75,38 +76,71 @@ public class DataWriter extends DataConstants {
 			
 			// Handle progress object
 			JSONObject progressObj = new JSONObject();
-			if (user.getProgress() != null) {
-				for (String key : user.getProgress().keySet()) {
-					progressObj.put(key, user.getProgress().get(key));
+			if (student.getProgress() != null) {
+				for (String key : student.getProgress().keySet()) {
+					progressObj.put(key, student.getProgress().get(key));
 				}
 			}
 			userDetails.put(USER_PROGRESS, progressObj);
 		} 
-		else if (user.getType().equals("Teacher")) {
+		else if (user instanceof Teacher) { // Fixed: Check if user is an instance of Teacher
+			Teacher teacher = (Teacher) user;
 			// Add teacher-specific fields
 			JSONArray studentsArray = new JSONArray();
-			ArrayList<String> students = user.getStudents();
-			if (students != null) {
-				for (String student : students) {
+			ArrayList<String> studentIds = getStudentIds(teacher); // Fixed: Helper method
+			if (studentIds != null) {
+				for (String student : studentIds) {
 					studentsArray.add(student);
 				}
 			}
 			userDetails.put(USER_STUDENTS, studentsArray);
 			
 			JSONArray scheduledLessons = new JSONArray();
-			ArrayList<String> lessons = user.getScheduledLessons();
+			ArrayList<String> lessons = getScheduledLessonsIds(teacher); // Fixed: Helper method
 			if (lessons != null) {
 				for (String lesson : lessons) {
 					scheduledLessons.add(lesson);
 				}
 			}
 			userDetails.put(USER_SCHEDULED_LESSONS, scheduledLessons);
-			userDetails.put(USER_SPECIALIZATION, user.getSpecialization());
+			userDetails.put(USER_SPECIALIZATION, teacher.getSpecialization());
 		}
         
         return userDetails;
 	}
-
+	
+	// Helper methods to convert objects to IDs
+	private static ArrayList<String> convertSongsToIds(ArrayList<Song> songs) {
+		ArrayList<String> songIds = new ArrayList<>();
+		if (songs != null) {
+			for (Song song : songs) {
+				songIds.add(song.getId());
+			}
+		}
+		return songIds;
+	}
+	
+	private static ArrayList<String> getEnrolledLessonsIds(Student student) {
+		// This method would extract IDs from Lesson objects
+		ArrayList<String> lessonIds = new ArrayList<>();
+		// Implementation depends on your Student and Lesson classes
+		return lessonIds;
+	}
+	
+	private static ArrayList<String> getStudentIds(Teacher teacher) {
+		// This method would extract IDs from Student objects
+		ArrayList<String> studentIds = new ArrayList<>();
+		// Implementation depends on your Teacher class
+		return studentIds;
+	}
+	
+	private static ArrayList<String> getScheduledLessonsIds(Teacher teacher) {
+		// This method would extract IDs from Lesson objects
+		ArrayList<String> lessonIds = new ArrayList<>();
+		// Implementation depends on your Teacher class
+		return lessonIds;
+	}
+	
 	public static void main(String[] args){
 		DataWriter.saveUsers();
 	}

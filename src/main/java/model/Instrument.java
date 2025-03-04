@@ -5,12 +5,17 @@ import java.util.HashMap;
 
 public class Instrument {
     private ArrayList<Character> noteNames;
-    public HashMap<String, noteNames> instrument;
+    public HashMap<String, ArrayList<Character>> instrument; // Fixed: changed noteNames to ArrayList<Character>
     private String name;
     private String type;
     private String tuning;
     private int difficulty;
     private String key;
+
+    public Instrument() {
+        noteNames = new ArrayList<>();
+        instrument = new HashMap<>();
+    }
 
     public String getName() {
         return name;
@@ -33,11 +38,10 @@ public class Instrument {
     }
 
     public void setTuning(String tuning) {
-
+        this.tuning = tuning;
     }
 
-    public void setInstrument(Instrument instruemnt) {
-
+    public void setInstrument(Instrument instrument) {
+        // Implementation to set instrument details
     }
-
 }

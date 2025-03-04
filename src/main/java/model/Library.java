@@ -7,33 +7,64 @@ public class Library {
     private ArrayList<Song> songs;
     private static Library library;
     private HashSet<User> users;
-    private Arraylist<Lesson> lessons;
+    private ArrayList<Lesson> lessons; // Fixed: Changed Arraylist to ArrayList
 
     private Library() {
-
+        songs = new ArrayList<>();
+        users = new HashSet<>();
+        lessons = new ArrayList<>();
+    }
+    
+    public static Library getInstance() {
+        if (library == null) {
+            library = new Library();
+        }
+        return library;
     }
 
     public void addSong(Song song) {
-
+        songs.add(song);
     }
 
     public void removeUser(User user) {
-
+        users.remove(user);
     }
 
-    public Arraylist<Lesson> getLessons() {
+    public ArrayList<Lesson> getLessons() {
         return lessons;
     }
 
     public ArrayList<Song> sortByGenre(String genre) {
-        return songs;
+        ArrayList<Song> result = new ArrayList<>();
+        for (Song song : songs) {
+            if (song.getGenre().equals(genre)) {
+                result.add(song);
+            }
+        }
+        return result;
     }
 
     public ArrayList<Song> sortByArtist(String artist) {
-        return songs;
+        ArrayList<Song> result = new ArrayList<>();
+        for (Song song : songs) {
+            if (song.getArtistName().equals(artist)) {
+                result.add(song);
+            }
+        }
+        return result;
     }
 
-    public ArrayList<Song> sortByName(String title) {
-        return songs;
+    public ArrayList<Song> findByName(String title) {
+        ArrayList<Song> result = new ArrayList<>();
+        for (Song song : songs) {
+            if (song.getTitle().contains(title)) {
+                result.add(song);
+            }
+        }
+        return result;
+    }
+    
+    public void save() {
+        // Implementation for saving library data
     }
 }

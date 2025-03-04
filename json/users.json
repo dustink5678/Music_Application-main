@@ -1,29 +1,29 @@
 [
-   {
-        "id": "5742f3e3-c288-44a3-8823-b8475f2ce091",
-        "username" : "Jsmith",
-        "email":"Jsmith14@gmail.com",
-        "password":"ILoveMusic123",
-        "joinDate":"2025-02-22T18:15:44.923163",
-        "favorites": ["96ee897c-f9fa-483b-8102-29c834bca234"],
-        "type": "Student",
-        "enrolledLessons": ["lesson_2025_02_23_1500"],
-        "skillLevel": 2,
-        "practiceList": ["96ee897c-f9fa-483b-8102-29c834bca234"],
-        "progress": {
-            "96ee897c-f9fa-483b-8102-29c834bca234": 45
-        }
-   },
-   {
-      "id": "a7d2f8e9-b394-42c5-9f67-d12e6f3a90b2",
-      "username": "MusicTeacher",
-      "email": "teacher.music@gmail.com",
-      "password": "TeachingMusic456",
-      "joinDate": "2025-01-15T09:30:22.123456",
-      "favorites": ["96ee897c-f9fa-483b-8102-29c834bca234"],
-      "type": "Teacher",
-      "students": ["5742f3e3-c288-44a3-8823-b8475f2ce091"],
-      "scheduledLessons": ["lesson_2025_02_23_1500"],
-      "specialization": "Piano"
-  }
-]
+    {
+         "id": "5742f3e3-c288-44a3-8823-b8475f2ce091",
+         "username" : "Jsmith",
+         "email":"Jsmith14@gmail.com",
+         "password":"ILoveMusic123",
+         "joinDate":"2025-02-22T18:15:44.923163",
+         "favorites": ["96ee897c-f9fa-483b-8102-29c834bca234"],
+         "type": "Student",
+         "enrolledLessons": ["lesson_2025_02_23_1500"],
+         "skillLevel": 2,
+         "practiceList": ["96ee897c-f9fa-483b-8102-29c834bca234"],
+         "progress": {
+             "96ee897c-f9fa-483b-8102-29c834bca234": 45
+         }
+    },
+    {
+       "id": "a7d2f8e9-b394-42c5-9f67-d12e6f3a90b2",
+       "username": "MusicTeacher",
+       "email": "teacher.music@gmail.com",
+       "password": "TeachingMusic456",
+       "joinDate": "2025-01-15T09:30:22.123456",
+       "favorites": ["96ee897c-f9fa-483b-8102-29c834bca234"],
+       "type": "Teacher",
+       "students": ["5742f3e3-c288-44a3-8823-b8475f2ce091"],
+       "scheduledLessons": ["lesson_2025_02_23_1500"],
+       "specialization": "Piano"
+   }
+ ]
