@@ -1,0 +1,616 @@
+You're right - I'll provide a much more detailed text representation of all the documents, including full descriptions of the UML diagrams and all content. This way, you'll have everything needed to recreate the complete understanding in another chat.
+DOCUMENT 1: University of South Carolina Music Application
+Page 1 - Title Page
+CopyUniversity of South Carolina
+Music Application
+CSCE 247: Software Engineering
+Anuska Sharma, Dustin King, Brice Odom, Matthew Scharnitzky
+January 26th, 2025
+Page 2 - Table of Contents
+CopyTable of Contents
+1. Introduction                  4
+2. Stakeholders                 5
+3. Constraints                   6
+4. Overall Description          7
+5. Business Use Cases           8
+6. Functional Requirements      9
+7. Non-Functional Requirements  9
+9. Competitive Analysis         11
+Page 3 - Overview
+Copy1. OVERVIEW
+This project aims to create a music app that serves as both an interactive learning tool for
+beginners and an advanced platform for experienced musicians. The app allows users to learn
+how to play a variety of instruments (such as guitar, piano, and violin) while also teaching them to
+read and understand sheet music. The app offers personalized learning paths, progress tracking,
+and engaging tutorials that adapt to the learner's skill level. By incorporating interactive features
+like real-time feedback, video lessons, and practice modes, it ensures that learning is both
+effective and enjoyable.
+
+GOALS
+The goal is to make music education accessible to anyone, anywhere, at any time, by providing a
+comprehensive platform for learning to play instruments and read sheet music. The app will
+target both beginners and intermediate learners, providing them with the tools needed to
+improve their musical skills in an efficient and fun way.
+
+BUSINESS PROBLEM
+The primary business problem this app addresses is the lack of affordable and accessible music
+education for individuals who want to learn to play an instrument and read sheet music.
+Traditional music lessons can be expensive and time-consuming, limiting access to many aspiring
+musicians. This app offers a solution by providing high-quality music education at a fraction of the
+cost, allowing users to learn at their own pace, anytime and anywhere.
+Page 4 - Stakeholders
+Copy2. STAKEHOLDERS
+
+1. End Users (Music Learners):
+   ○ Role: The primary users of the app are individuals seeking to learn or improve
+     their musical skills.
+   ○ Interests: They are looking for a convenient, accessible, and engaging platform to
+     learn instruments and read sheet music.
+   ○ Needs: Easy-to-follow tutorials, personalized learning paths, real-time feedback,
+     and progress tracking.
+
+2. Content Creators (Music Educators and Instructors):
+   ○ Role: Music professionals who create and upload content, including lessons,
+     tutorials, and sheet music exercises.
+   ○ Interests: Ensuring that their content reaches a wide audience and that it is
+     effectively used in the learning process.
+   ○ Needs: Tools to easily create, upload, and update educational content, while
+     ensuring the content is easily understood and accessible to users.
+
+3. App Developers and Designers:
+   ○ Role: The team responsible for designing the user interface, developing the app,
+     and implementing its functionalities.
+   ○ Interests: Building a user-friendly and technically robust platform that meets the
+     needs of learners and content creators.
+   ○ Needs: Clear project requirements, feedback from users, and the ability to
+     continuously improve the app's features based on user needs.
+Page 5 - Constraints
+Copy3. CONSTRAINTS
+
+Schedule Constraints:
+● The app must be developed and launched within a 6-month timeframe to meet market
+  demands and competition.
+● Regular updates will be needed post-launch to maintain engagement and fix bugs.
+
+Budget Constraints:
+● The total budget for the project is $0, which must cover development costs, marketing,
+  and content creation.
+
+Workplace Environment Constraints:
+● Limited access to in-person testing may hinder user experience feedback, so user testing
+  will be primarily conducted through virtual surveys and remote focus groups.
+
+Partner App Constraints:
+● The app must integrate with third-party platforms like YouTube (for video tutorials) and
+  Spotify (for music streaming).
+Page 6 - Overall Description
+Copy4. OVERALL DESCRIPTION
+
+System Environment Overview:
+The music learning app will operate in a highly interactive and user-driven environment. The
+platform must be compatible across various devices, including smartphones (iOS and Android),
+tablets, and desktops to ensure a broad reach. The app will be available via the App Store and
+Google Play, and it should seamlessly integrate with external platforms to provide users with a
+holistic music-learning experience.
+
+Hardware Requirements:
+● Smartphones/Tablets: The app must be optimized for both Android and iOS platforms,
+  ensuring smooth functionality across a variety of devices, screen sizes, and operating
+  systems.
+● Desktops/Laptops: For users who prefer larger screens, the app should be available as a
+  web application that works across all major browsers (Chrome, Safari)
+
+Software Requirements:
+● Backend System: The app will rely on cloud-based servers for storing user data (e.g.,
+  progress tracking, lesson history) and for real-time performance feedback. It will use
+  technologies such as AWS or Google Cloud for scalability.
+● Frontend Interface: The app's user interface will be designed using React Native or a
+  similar cross-platform framework to ensure it works on both iOS and Android devices with
+  minimal differences in performance.
+Page 7 - Business Use Cases
+Copy5. BUSINESS USE CASES
+
+[This page contains a use case diagram showing connections between actors and actions:]
+
+The diagram shows three primary actors:
+- User
+- Teacher
+- Musician
+
+The Teacher actor can:
+- Manage Class (which branches to: Add Students, Assign Tasks)
+- Create Lessons (which branches to: Provide Theory, Create Tests)
+- Create Profile (which branches to: Set Time/Key Signature)
+
+The Musician actor and Teacher can both:
+- Create Song (which branches to: Add Notes, Set Pitch, Add Rests, Add Lyrics, Set Tempo)
+- View Song (which branches to: Playback Song, Export PDF)
+
+The User can interact with Musician and Teacher, showing relationships between all three roles.
+Page 8 - Functional Requirements and Non-Functional Requirements
+Copy6. FUNCTIONAL REQUIREMENTS
+Functional Requirement Spreadsheet
+
+7. NON FUNCTIONAL REQUIREMENTS
+
+Look and Feel Requirements
+● The user interface of the system shall be designed for beginner users to easily navigate and
+  understand.
+● The system shall provide a clean and organized layout for clear readability of sheet music and
+  music theory content.
+
+Usability Requirements
+● The system shall be usable by users with a wide range of musical experience, from beginners to
+  professionals.
+● The system shall provide tooltips and tutorials to help users understand features.
+● The system shall allow users to customize their experience, including font size and theme settings.
+
+Maintainability and Support Requirements
+● The system shall support regular updates without affecting user data.
+● The system shall provide online support documentation for troubleshooting.
+
+Security Requirements
+● The user's information shall be stored securely using encryption.
+● The system shall require authentication for profile access and data modification.
+● The system shall protect against unauthorized access to user-generated content.
+Page 9 - Blank page with only the number "10" at the bottom
+Page 10 - User Personas
+Copy[This page contains three detailed user personas with photos and information:]
+
+EMILY HEN
+FEMALE
+SAN FRANCISCO, CA
+30
+AUTHOR
+$50,000/YEAR
+
+EDUCATION: Bachelor of Arts in Music, University of Washington
+LANGUAGE: English (fluent)
+PERSONALITY: Creative, inquisitive, detail-oriented, light-hearted but deep thinker, curious, innovative, think-outside-the-box
+PAIN POINTS: Struggles with technology options, struggles with keeping her schedule
+
+GOALS:
+- Find music teaching platform for different music
+- Find music quickly without having to customize too much
+
+BEHAVIOR & INTEREST:
+- Music Preferences: Loves indie, lo-fi bands, and electronic music to set the tone for writing
+- Enjoys discovering new authors and curating playlists to match themes of her work
+- Listens to music during creative inspiration, helping her get into the right headspace for writing
+- Learning Habits: Watches video talks, typically 2-3 hours
+- Values structured, organized learning
+
+APP FEATURES THEY LOVE:
+- Enjoys music apps with curated playlists that match specific moods or activities, especially those tailored for creative processes
+- Appreciates seamless integration with smart devices, allowing her to control her music without interrupting her workflow
+
+TECHNICAL SKILLS:
+Writing ●●●●●
+Grammar ●●●●●
+Proofreading ●●●●●
+Analyzing ●●●●●
+
+
+ALEX MARTINEZ
+MALE
+AUSTIN, TX
+25
+JUNIOR GRAPHIC DESIGNER AT A CREATIVE AGENCY
+$45,000/YEAR
+
+EDUCATION: Bachelor of Fine Arts, University of Texas-Austin
+LANGUAGE: English (fluent)
+PERSONALITY: Trendy, Creative, creative, and culturally spicy
+Audio-Taste: Vibes Open to experimentation, especially with "hidden gems"
+
+PAIN POINTS:
+- Struggles to find truly new music
+- Frustrated with algorithm-driven recommendations that seem like the app controller is monetizing
+
+GOALS:
+- Find music suitable for specific moods or creative projects
+- Learn songs by playing on classical instruments
+
+BEHAVIOR & INTEREST:
+- Music Preferences: Listens indie, hip hop, and electronic music for focus during work
+- Enjoys discovering underground artists and curating playlists for friends
+- Attends 1-3 live shows per month, prioritizes in-person exploration
+- Listening Habits: Streams music daily, averaging 6-8 hours of active listening while working on design projects
+
+APP FEATURES THEY LOVE:
+- Personalized Discoveries: Weekly updates of curated playlists based on listening habits
+- Social Playing: Quick access to "Chill Vibes" or "Focus Boost" playlists
+- Collaborative capabilities to send playlists and songs directly to friends or post on Instagram Stories
+
+TECHNICAL SKILLS:
+Market Analysis ●●●●●
+SEO ●●●●●
+Copywriting ●●●●●
+Web Programming ●●●●●
+
+
+JAMES DAVIS
+MALE
+NEW YORK CITY, NY
+28
+BARISTA
+$35,000/YEAR
+
+EDUCATION: Bachelor of Arts in Music, New York City College of Technology
+LANGUAGE: English (fluent)
+PERSONALITY: Passionate, curious about the world around him, drawn to connecting with others through shared musical interests
+
+PAIN POINTS:
+- Struggles with gaining visibility for his music due to oversaturation
+- Faces difficulty in connecting with the right audience for his unique sound
+
+GOALS:
+- Build an audience, while retaining creative freedom
+- Break into the music scene by promoting his albums
+- Find a platform to showcase his music to a larger audience, collaborate with other musicians
+
+BEHAVIOR & INTEREST:
+- Enjoys discovering new music and environments to find inspiration for new music
+- Spends his nights writing, recording, and experimenting with new sounds
+- Actively uses social apps to share his tracks and see how they resonate with listeners
+- Enjoys attending open mic nights and collaborating with other musicians
+- Stays on the lookout and diverse NYC music scene, always looking to connect with like-minded creatives
+
+APP FEATURES THEY LOVE:
+- Enjoys acoustic rock folk and experimental sounds that blend traditional and modern elements
+- Prefers discovering underground and indie artists to expand his musical horizons
+- Values smooth and intuitive interface that works across devices
+- Values apps that allow for easy music sharing and collaboration with other musicians
+
+TECHNICAL SKILLS:
+Guitar ●●●●●
+Coffee Making ●●●●●
+Garage Band ●●●●●
+Logic Pro ●●●●●
+Pages 11-12 - Competitive Analysis
+CopyforScore
+
+Strengths: The interface is intuitive and designed specifically for musicians, allowing users to import and organize sheet music in PDF format easily. The automatic scrolling feature eliminates the need for manual page-turning during performances. It also offers robust annotation tools for marking sheet music, a built-in metronome, and audio playback synchronization to enhance practice and performance. These features make it suitable for both rehearsals and live settings.
+
+Weaknesses: While forScore has many valuable features, it does not integrate lyrics or visual effects that could make performances more engaging. Additionally, the app requires a one-time purchase, which might deter some users. New users may find the app's wide range of tools overwhelming at first, requiring some time to become proficient with its interface.
+
+Audience/Focus: forScore is designed for musicians of all levels, ranging from students to seasoned professionals, and it caters to individual performers as well as ensembles. It delivers a comprehensive digital solution for managing and performing sheet music, streamlining workflows and optimizing performance experiences.
+
+Newzik
+
+Strengths: Newzik supports a variety of file formats, including PDF, MusicXML, and text files, making it highly versatile. Its ability to synchronize sheet music with backing tracks creates an immersive practice environment. The app's cloud-based collaboration system enables real-time sharing and editing among performers, making it ideal for groups like orchestras. Additionally, the automatic scrolling mode ensures uninterrupted performances, adding to its practical features.
+
+Weaknesses: The user interface, while powerful, can feel complex and overwhelming for beginners unfamiliar with the extensive functionality. The reliance on cloud storage means users need a stable internet connection to access all features seamlessly. This can be a disadvantage during live performances in areas with poor connectivity. Additionally, some advanced features may come at a higher price point.
+
+Audience & Focus: Newzik targets professional musicians, orchestras, and educators who require collaborative tools for managing and sharing sheet music efficiently. Its emphasis on connectivity and flexibility ensures that both individual performers and groups can optimize their practice and performance experiences.
+
+Piascore
+
+Strengths: Piascore offers a free and easy-to-use platform for managing and viewing digital sheet music. A unique feature is its gesture-based page-turning, which is especially useful for hands-free use during live performances. The app also includes a built-in music library where users can search and download sheet music, making it highly convenient. Other features, like annotations, a metronome, and audio playback, make it a comprehensive tool for both practice and performance. Its clean design ensures accessibility for users at all levels.
+
+Weaknesses: The app's free model includes advertisements, which can be distracting during use, especially in professional settings. The gesture recognition feature, while innovative, sometimes struggles in low-light conditions, which may frustrate users during performances. Additionally, some advanced tools and customization options are restricted to the premium subscription, limiting functionality for free users.
+
+Audience/Focus: Piascore is designed for both amateur and professional musicians who value affordability and practical features. It provides an accessible and innovative solution for managing digital sheet music, prioritizing ease of use and affordability for casual and professional musicians alike.
+
+Application | Strengths | Weaknesses | Audience/Focus
+-----------|-----------|------------|---------------
+forScore | +Audio sync +Autoscrolling | -No Lyrics -Paid App | Digital performance Sheet music
+Newzik | +Cloud based sharing +File versatility | -Complicated UI -Ads | Collaborative editing Professionals
+PiaScore | +Free option +Gesture Controls | -Ads included -Unreliable features | All levels Digital Sheet Music
+
+From this competitive analysis, we have learned a great deal from the successes and failures of similar sheet music apps, and this will go a long way in informing us about our product development. We concluded that our app needed to take the approach of simplicity, efficient scrolling, and seamless integration of performance tools. forScore had a great, user-friendly interface with essential features like auto-scrolling and audio synchronization but lacked advanced visual effects and lyrics integration. Musicians require a less distracting product during performances, so having a clean, direct interface that keeps them focused on the music is very important.
+
+Besides, collaboration and user interaction should be enhanced, as is the case with the cloud-based sharing feature by Newzik. Adding real-time collaboration and file-sharing will bring in great value, especially for ensemble settings. However, simplicity should be balanced with powerful tools to avoid overwhelming the user-a common pitfall, skillfully avoided by Piascore's gesture controls and built-in music library, although it does contain ads that might distract the user.
+
+The idea is to get only the best of these: simplicity in design and intuitive controls, as from forScore, collaboration enhanced by Newzik, and accessibility and free features realized by Piascore. By setting the high level of smooth scrolling, user interaction, and professional-grade performance features, we are trying to provide seamless experiences for solo musicians and ensembles, which support users' concentration on their performances without causing unnecessary distraction.
+DOCUMENT 2: UML Class Diagram
+Complete text description of the UML Class Diagram
+Copy[The diagram shows a comprehensive class structure for the music learning application with the following classes and their relationships:]
+
+Song
+- title: String
+- bars: ArrayList<ArrayList<Bar>>
+- isPublic: boolean
+- comments: ArrayList<Comment>
+- tempo: Tempo
+- genre: String
+- artist: String
+- instruments: ArrayList<Instrument>
++ Song (String title, ArrayList<Bar> bars, boolean isPublic, ArrayList<Comment> comments, Tempo tempo, ArrayList<instrument> instruments)
++ newInstrument(ArayListArrayList<Bar>> bars, Instrument instrument): void
++ addBar(Bar): void
++ addComment(User author, String comment)
+
+User
+- username: String
+- email: String
+- password: String
+- joinDate: LocalDateTime
+- favorites: ArrayList<Song>
++ login(): boolean
++ updateProfile(String): void
++ addFavorite(Song): void
++ isMatch(String username, String password): boolean
+
+Teacher [extends User]
+- students: ArrayList<Student>
+- scheduledLessons: ArrayList<Lesson>
+- specialization: String
++ addStudent(username): boolean
++ scheduleLesson(Lesson): void
++ getStudents(): ArrayList<Student>
+
+Student [extends User]
+- enrolledLessons: ArrayList<Lesson>
+- skillLevel: int
+- practiceList: ArrayList<Song>
+- progress: HashMap<Song, Integer>
++ enrollInLesson(Lesson): void
++ updateProgress(Song, int): void
++ getSkillLevel(): int
+
+Lesson
+- scheduledTime: LocalDateTime
+- currentSong: Song
+- notes: String
+- isCompleted: boolean
++ start(): void
++ end(): void
++ updateNotes(String): void
+
+Library
+- songs: ArrayList<Song>
+- Library: library
+- users: HashSet<User>
+- lessons: ArrayList<Lesson>
+- Library()
++ getInstance(): Library
++ addSong(Song): void
++ removeUser(User): void
++ getLessons(): ArrayList<Lesson>
++ sortByGenre(String genre): ArrayList<Song>
++ sortByArtist(String artist): ArrayList<Song>
++ findByName(String title) ArrayList<Song>
++ save()
+
+Rest
+- numerator: int
+- denominator: int
+- position: int
++ Rest(int numerator, int denominator, int position)
+
+Note
+- numerator: int
+- denominator: int
+- pitch: int
+- accidental: Accidental
+- position: int
++ Note(int numerator, int denominator, int pitch, Accidental accidental, int position)
+
+<<Enumeration>> Accidental
+FLAT
+SHARP
+NATURAL
+DOUBLESHARP
+DOUBLEFLAT
+
+<<Enumeration>> Accent
+STACCATO
+STACCATISSIMO
+MARCATO
+ACCENT
+TENUTO
+NONE
+
+Comment
+- text: String
+- author: User
+- timestamp: LocalDateTime
+- barNumber: int
++ getText(): String
++ getAuthor(): User
++ edit(String): void
+
+Viewer
+- currentSong: Song
+- currentPosition: int
+- isPlaying: boolean
++ play(): void
++ pause(): void
++ seek(int position): void
+
+Metronome
+- bpm: int
+- isActive: boolean
+- timer: Timer
+- tickSound: Sound
++ start(): void
++ stop(): void
++ setMetronomeBPM(int bpm): void
+
+Bar
+- timeSignature: TimeSignature
+- keySignature: KeySignature
+- notes: ArrayList<Note>
+- rests: ArrayList<Rest>
++ Bar(int length, KeySignature keySignature)
++ addNote(Note): void
++ removeNote(int): void
+
+TimeSignature
+- numerator: int
+- denominator: int
++ TimeSignature(int numerator, int denominator)
+
+KeySignature
+- key: String
+- accidentals: ArrayList<Note>
++ KeySignature(String key, ArrayList<Note> accidentals)
++ getKey(): String
++ setKey(String): void
++ getAccidentals(): ArrayList<Note>
++ transpose(int): void
+
+Tempo
+- bpm: int
+- isRunning: boolean
+- timeSignature: TimeSignature
++ setBPM(int bpm): void
++ start(): void
++ stop(): void
+
+Instrument
+- noteNames: ArrayList<char>
++ instrument: HashMap<String, noteNames>
+- name: String
+- type: String
+- range: Range notes
+- tuning: String
+- difficulty: int
+- key: String
++ getName(): String
++ getType(): String
++ getRange(): Range
++ getTuning(): String
++ getDifficulty(): int
++ getKey(): String
++ setTuning(String tuning): void
+
+UI
+[This appears to be a parent/container class]
+
+MusicLearningApplication
+- user: User
+- library: Library
+- currentUser: User
+- currentSong: Song
++ MusicLearningApplication()
++ signup(String username, String email, String password): User
++ login(String username, String password): User
++ logout(): void
++ searchSongs(String query): ArrayList<Song>
++ manageLessons(User student): ArrayList<Lesson>
++ updateUserProfile(User user): boolean
++ validateCredentials(String username, String password): boolean
++ comment(Song song, String comment): boolean
++ scheduleLesson(currentSong): boolean
+
+UserList
+- users: ArrayList<User>
+- UserList: userList
+- UserList()
++ getInstance(): UserList
++ createUser(String username, String email, String password, LocalDateTime joinDate): boolean
++ getUser(username)
++ save()
+
+SongList
+- songs: ArrayList<Song>
+- name: String
+- creator: User
+- isPublic: boolean
+- creationDate: LocalDateTime
+- lastModified: LocalDateTime
++ SongList(String name, User creator)
++ addSong(Song song): void
++ removeSong(Song song): void
++ moveSong(Song song, int newPosition): void
++ getSongs(): ArrayList<Song>
++ filter(Predicate<Song> criteria): ArrayList<Song>
++ sort(Comparator<Song> comparator): void
++ share(User user): void
++ makePublic(): void
++ makePrivate(): void
++ getDuration(): Duration
++ clone(): SongList
+
+DataLoader
+- filePath: String
+- connection: DatabaseConnection
++ DataLoader(String filePath)
++ loadUser(String id): User
++ loadSong(String id): Song
++ loadLesson(String id): Lesson
++ loadInstrument(String id): Instrument
+- validateData(Object data): boolean
+- handleLoadError(Exception e): void
+
+DataWriter
+- filePath: String
+- connection: DatabaseConnection
++ DataWriter(String filePath)
++ saveUser(User user): void
++ saveSong(Song song): void
++ saveLesson(Lesson lesson): void
++ saveInstrument(Instrument instrument): void
+- formatData(Object data): String
+- handleWriteError(Exception e): void
+
+[The diagram also shows relationships between classes with lines indicating inheritance, association, composition, etc.]
+DOCUMENT 3: Sequence Diagrams
+Sequence Diagram 1: User smith02 logs in, searches for "happy birthday," and adds a comment
+Copy[The sequence diagram shows interactions between these objects:]
+- User
+- MusicLearningApplication
+- UserList
+- User
+- Library
+- Song
+- Comment
+- DataLoader
+- DataWriter
+
+Sequence of interactions:
+1. User calls MusicLearningApplication()
+2. MusicLearningApplication calls getInstance() on UserList
+3. MusicLearningApplication calls getInstance() on Library  
+4. User calls login("smith02","music123") on MusicLearningApplication
+5. MusicLearningApplication calls getUser("smith02","music123") on UserList
+6. UserList calls isMatch("smith02","music123") on User
+7. MusicLearningApplication sets currentUser
+8. User calls searchSongs("happy birthday") on MusicLearningApplication
+9. MusicLearningApplication calls findByName("happy birthday") on Library
+10. Library calls getTitle("happy birthday") on Song
+11. MusicLearningApplication sets currentSong
+12. User calls comment(currentRecipe, "nice") on MusicLearningApplication
+13. MusicLearningApplication calls comment(currentUser, "nice") on Song
+14. Song calls comment(currentUser, "nice") on Comment
+15. User calls logout() on MusicLearningApplication
+16. MusicLearningApplication calls save() on UserList
+17. MusicLearningApplication calls save() on Library
+18. UserList calls saveUsers() on DataWriter
+19. Library calls saveSongs() on DataWriter
+Sequence Diagram 2: User smith02 logs in, adds student to class, searches for and assigns "happy birthday" as a lesson
+Copy[The sequence diagram shows interactions between these objects:]
+- User
+- MusicLearningApplication
+- UserList
+- User
+- Library
+- Song
+- Lesson
+- DataLoader
+- DataWriter
+
+Sequence of interactions:
+1. User calls MusicLearningApplication()
+2. MusicLearningApplication calls getInstance() on UserList
+3. MusicLearningApplication calls getInstance() on Library
+4. User calls login("smith02","music123") on MusicLearningApplication
+5. MusicLearningApplication calls getUser("smith02","music123") on UserList
+6. UserList calls isMatch("smith02","music123") on User
+7. MusicLearningApplication sets currentUser
+8. User calls addStudent("student12") on MusicLearningApplication
+9. MusicLearningApplication calls getUser("student12") on UserList
+10. UserList calls isMatch("student12") on User returning True
+11. User calls searchSongs("happy birthday") on MusicLearningApplication
+12. MusicLearningApplication calls findByName("happy birthday") on Library
+13. Library calls getTitle("happy birthday") on Song
+14. MusicLearningApplication sets currentSong
+15. User calls scheduleLesson(currentSong) on MusicLearningApplication
+16. MusicLearningApplication calls scheduleLesson(currentSong) on User
+17. User calls logout() on MusicLearningApplication
+18. MusicLearningApplication calls save() on UserList
+19. MusicLearningApplication calls save() on Library
+20. UserList calls saveUsers() on DataWriter
+21. Library calls saveSongs() on DataWriter
