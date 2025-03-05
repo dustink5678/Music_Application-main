@@ -67,4 +67,24 @@ public class Library {
     public void save() {
         // Implementation for saving library data
     }
+
+    public ArrayList<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(ArrayList<Song> songs) {
+        this.songs = songs;
+    }
+
+    public HashSet<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(HashSet<User> users) {
+        this.users = users;
+    }
+
+    public void setLessons(ArrayList<Lesson> lessons) {
+        this.lessons = lessons;
+    }
 }
